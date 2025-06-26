@@ -5,7 +5,9 @@ import model.ItemPedido;
 
 public class RelatorioTexto {
     public void gerar(Pedido pedido){
+        System.out.println("===== RELATORIO DE PEDIDO =====");
         System.out.println("Cliente: " + pedido.getCliente().getNome());
+        System.out.println("Email: " + pedido.getCliente().getEmail());
         System.out.println("Produtos:");
         for (ItemPedido item : pedido.getItens()) {
             System.out.println("- " + item.getProduto().getNome() + " (" + item.getQuantidade() + "x) - R$ " + item.getSubtotal());

@@ -7,6 +7,7 @@ public class RelatorioJSON {
     public void gerar(Pedido pedido) {
         System.out.println("{");
         System.out.println("  \"cliente\": \"" + pedido.getCliente().getNome() + "\",");
+        System.out.println("  \"cliente\": \"" + pedido.getCliente().getEmail() + "\",");
         System.out.println("  \"produtos\": [");
         for (int i = 0; i < pedido.getItens().size(); i++) {
             ItemPedido item = pedido.getItens().get(i);
